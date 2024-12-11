@@ -12,7 +12,7 @@ export default defineConfig(({ command, mode }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
 
-    base: mode === 'production' ? '/goit-advancedjs-hw-01/' : './',
+    base: mode === 'production' ? '/goit-advancedjs-hw-02/' : './',
     root: 'src',
     build: {
       sourcemap: true,
