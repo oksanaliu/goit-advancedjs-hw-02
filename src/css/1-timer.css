@@ -7,8 +7,7 @@ body {
   color: #333;
 }
 
-.back-link:hover,
-.back-button {
+.back-link {
   display: inline-block;
   margin: 20px;
   padding: 10px 20px;
@@ -22,8 +21,7 @@ body {
   left: 20px;
 }
 
-.back-link:hover,
-.back-button:hover {
+.back-link:hover {
   background-color: #7c9aba;
 }
 
