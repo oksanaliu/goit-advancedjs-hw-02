@@ -2,13 +2,17 @@ import { defineConfig } from 'vite';
 import { glob } from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
+import copy from 'rollup-plugin-copy';
 import SortCss from 'postcss-sort-media-queries';
 
-export default defineConfig(({ command }) => {
+export default defineConfig(({ command, mode }) => {
   return {
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
+
+    base: mode === 'production' ? '/goit-advancedjs-hw-01/' : './',
     root: 'src',
     build: {
       sourcemap: true,
@@ -39,9 +43,17 @@ export default defineConfig(({ command }) => {
     },
     plugins: [
       injectHTML(),
-      FullReload(['./src/**/**.html']),
+      FullReload(['./src/**.html']),
       SortCss({
         sort: 'mobile-first',
+      }),
+      viteStaticCopy({
+        targets: [
+          {
+            src: 'img/**/*', // Звідки копіювати
+            dest: 'img', // Куди копіювати в dist
+          },
+        ],
       }),
     ],
   };
