@@ -13,7 +13,7 @@ form.addEventListener('submit', event => {
   if (isNaN(delay) || !state) {
     iziToast.error({
       title: 'Error',
-      message: 'Please provide valid inputs',
+      message: 'Please provide valid inputs.',
       position: 'topRight',
       timeout: 3000,
     });
@@ -44,7 +44,7 @@ function createNotificationPromise(delay, state) {
     setTimeout(() => {
       if (state === 'fulfilled') {
         resolve(`Fulfilled promise in ${delay}ms`);
-      } else {
+      } else if (state === 'rejected') {
         reject(`Rejected promise in ${delay}ms`);
       }
     }, delay);
