@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Feedback Form</title>
+  <script type="module" crossorigin src="/goit-advancedjs-hw-01/2-form.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-01/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-01/assets/vendor-B2mb6eXk.js">
+  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-01/assets/vendor-Dr4k8ETB.css">
+  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-01/assets/2-form-D9sEzzic.css">
+</head>
+
+<body>
+  <p><a href="./index.html" class="back-link">Go back</a></p>
+  <div class="form-container">
+    <form class="feedback-form js-feedback-form" autocomplete="off">
+      <div class="error-message js-error-message">Please fill out all fields!</div>
+      <label>
+        Email
+        <input type="email" name="email" class="form-input" placeholder="Enter email" required />
+      </label>
+      <label>
+        Message
+        <textarea name="message" class="form-textarea" placeholder="Enter your message" rows="5" required></textarea>
+      </label>
+      <button type="submit" class="form-submit">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
