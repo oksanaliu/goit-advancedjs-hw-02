@@ -1,34 +1,43 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Feedback Form</title>
+  <title>Snackbar Generator</title>
   <script type="module" crossorigin src="/goit-advancedjs-hw-02/2-snackbar.js"></script>
   <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-02/assets/modulepreload-polyfill-B5Qt9EMX.js">
   <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-02/assets/vendor-A92OCY9B.js">
   <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-02/assets/vendor-CUZofXIC.css">
-  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-02/assets/2-snackbar-D9sEzzic.css">
+  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-02/assets/2-snackbar-DVhpFF5i.css">
 </head>
 
 <body>
+  <h1>Snackbar Generator</h1>
   <p><a href="./index.html" class="back-link">Go back</a></p>
-  <div class="form-container">
-    <form class="feedback-form js-feedback-form" autocomplete="off">
-      <div class="error-message js-error-message">Please fill out all fields!</div>
+
+  <form class="form">
+    <label>
+      Delay (ms)
+      <input type="number" name="delay" required />
+    </label>
+
+    <fieldset>
+      <legend>State</legend>
       <label>
-        Email
-        <input type="email" name="email" class="form-input" placeholder="Enter email" required />
+        <input type="radio" name="state" value="fulfilled" required />
+        Fulfilled
       </label>
       <label>
-        Message
-        <textarea name="message" class="form-textarea" placeholder="Enter your message" rows="5" required></textarea>
+        <input type="radio" name="state" value="rejected" required />
+        Rejected
       </label>
-      <button type="submit" class="form-submit">Submit</button>
-    </form>
-  </div>
+    </fieldset>
+
+    <button type="submit">Create notification</button>
+  </form>
+
 </body>
 
 </html>
