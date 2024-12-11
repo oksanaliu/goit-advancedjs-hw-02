@@ -20,6 +20,7 @@
   "author": "Oksana Liuklian <lyuklyan4@icloud.com>",
   "license": "ISC",
   "dependencies": {
+    "flatpickr": "^4.6.13",
     "izitoast": "^1.4.0",
     "modern-normalize": "^3.0.1",
     "simplelightbox": "^2.14.3",
