@@ -4,7 +4,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const refs = {
-  startButton: document.querySelector('[data-start]'),
+  startButton: document.querySelector('#start-btn'),
   datePicker: document.querySelector('#datetime-picker'),
   daysValue: document.querySelector('[data-days]'),
   hoursValue: document.querySelector('[data-hours]'),
