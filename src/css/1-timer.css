@@ -7,7 +7,6 @@ body {
   color: #333;
 }
 
-.back-link,
 .back-button {
   display: inline-block;
   margin: 20px;
@@ -17,9 +16,11 @@ body {
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
-.back-link:hover,
 .back-button:hover {
   background-color: #7c9aba;
 }
